@@ -40,22 +40,23 @@ A multilingual scholarship guidance chatbot developed in collaboration with Hoch
 Make sure you have Python installed. Then, install the required Python packages:
 ```bash
 pip install rasa requests
+```
 
 2. **Run the Rasa Server**
 In your terminal, start the Rasa server:
-'''bash
+```bash
 rasa run
-
+```
 3. **Run the Actions Server (if using custom actions)**
 Open another terminal and start the actions server:
 '''bash
 rasa run actions
-
+```
  4. **Test the Chatbot**
 Use rasa shell to interact directly via command line:
 '''bash
 rasa shell
-
+```
 ## How to Test the Chatbot
 
 1. **Set Up the Environment:**  
