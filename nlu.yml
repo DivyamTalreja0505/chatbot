@@ -1,0 +1,124 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - Hello
+    - Hi
+    - Hey
+    - Good morning
+    - Good evening
+    - Hi there
+    - Hello there
+    - Greetings
+    - Hiya
+    - Howdy
+
+- intent: goodbye
+  examples: |
+    - Goodbye
+    - Bye
+    - See you later
+    - I have to go
+    - Talk to you later
+    - Farewell
+    - Catch you later
+    - Bye bye
+    - See you
+    - Later
+    
+
+- intent: ask_faq_eligibility
+  examples: |
+    - What are the eligibility criteria for the PROMOS scholarship?
+    - Who can apply for the PROMOS scholarship?
+    - Can exchange students apply for the PROMOS scholarship?
+    - Is the PROMOS scholarship available for all students?
+    - Are there any restrictions on who can apply for the PROMOS scholarship?
+    - Who is eligible to apply for the PROMOS scholarship?
+    - Can international students apply for the PROMOS scholarship?
+    - What are the requirements to be eligible for the PROMOS scholarship?
+    - Are there any specific eligibility conditions for the PROMOS scholarship?
+
+- intent: ask_faq_study_abroad
+  examples: |
+    - What are the options for studying abroad in Europe under the PROMOS scholarship?
+    - Can I study outside of Europe with the PROMOS scholarship?
+    - Is it possible to study in Europe with the PROMOS scholarship?
+    - Are there study abroad options outside of Europe with the PROMOS scholarship?
+    - Can the PROMOS scholarship be used for studying in other countries?
+    - What are the study abroad opportunities with the PROMOS scholarship?
+    - Can I use the PROMOS scholarship for a study program outside Europe?
+    - Are there any restrictions on where I can study abroad with the PROMOS scholarship?
+
+- intent: ask_faq_funded_activities
+  examples: |
+    - What does the PROMOS scholarship fund?
+    - Which activities are funded by the PROMOS scholarship?
+    - Does the PROMOS scholarship cover internships?
+    - Are study programs funded by the PROMOS scholarship?
+    - What types of activities can be funded by the PROMOS scholarship?
+    - Can I get funding for research through the PROMOS scholarship?
+    - Are there specific programs funded by the PROMOS scholarship?
+    - What are the funded activities under the PROMOS scholarship?
+
+- intent: ask_faq_application
+  examples: |
+    - What is the application deadline for the PROMOS scholarship?
+    - When will I know if I am selected for the PROMOS scholarship?
+    - What documents are required for the PROMOS scholarship application?
+    - What is the selection process for the PROMOS scholarship?
+    - How do I apply for the PROMOS scholarship?
+    - When is the deadline to apply for the PROMOS scholarship?
+    - How will I be notified about the selection for the PROMOS scholarship?
+    - What are the necessary documents for the PROMOS scholarship application?
+    - Can you explain the selection procedure for the PROMOS scholarship?
+
+- intent: ask_faq_scholarship_amount
+  examples: |
+    - How much money is provided by the PROMOS scholarship?
+    - How long does the PROMOS scholarship payment last?
+    - How do I receive the scholarship money?
+    - When will the scholarship money be transferred?
+    - What are the expenses covered by the PROMOS scholarship?
+    - Can I combine the PROMOS scholarship with Erasmus+?
+    - What is the amount of funding provided by the PROMOS scholarship?
+    - How long will I receive payments from the PROMOS scholarship?
+    - What is the process to get the scholarship money?
+    - When can I expect the scholarship money to be transferred?
+    - Are all my expenses covered by the PROMOS scholarship?
+    - Is it possible to receive both PROMOS and Erasmus+ scholarships?
+
+- intent: ask_combination_faq
+  examples: |
+    - What are the eligibility criteria and study abroad options for the PROMOS scholarship?
+    - Can I study both in Europe and outside Europe with the PROMOS scholarship?
+    - What does the PROMOS scholarship fund and what are the deadlines?
+    - How do I apply and what documents are required for the PROMOS scholarship?
+    - Who can apply for the PROMOS scholarship and what are the application deadlines?
+    - Are there options to study in multiple locations with the PROMOS scholarship?
+    - What activities are funded and what is the application process for the PROMOS scholarship?
+    - Can I apply for the PROMOS scholarship for both study and internship programs?
+- intent: ask_faq_other
+  examples: |
+    - I have another question about the PROMOS scholarship
+    - I want to ask something else about the PROMOS scholarship
+    - Can I ask another question about the PROMOS scholarship?
+    - I have a different question about the PROMOS scholarship
+    - Is there more information about the PROMOS scholarship?
+    - Can you tell me more about the PROMOS scholarship?
+    - I have a specific question about the PROMOS scholarship
+- intent: ask_promos_scholarship
+  examples: |
+    - I want to know about PROMOS scholarship
+    - Tell me about PROMOS scholarship
+    - What is the PROMOS scholarship?
+    - Can you explain the PROMOS scholarship?
+    - Information on PROMOS scholarship 
+
+- intent: ask_general_question
+  examples: |
+    - [Any question not covered above]
+    - Can you tell me more?
+    - I have a question.
+    - What else can you tell me?
+    - [Other unrecognized questions]       

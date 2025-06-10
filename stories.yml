@@ -1,0 +1,66 @@
+version: "2.0"
+stories:
+- story: greet user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: goodbye user
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: respond to eligibility FAQ
+  steps:
+  - intent: ask_faq_eligibility
+  - action: utter_faq_eligibility
+
+- story: respond to study abroad FAQ
+  steps:
+  - intent: ask_faq_study_abroad
+  - action: utter_faq_study_abroad
+
+- story: respond to funded activities FAQ
+  steps:
+  - intent: ask_faq_funded_activities
+  - action: utter_faq_funded_activities
+
+- story: respond to application FAQ
+  steps:
+  - intent: ask_faq_application
+  - action: utter_faq_application
+
+- story: respond to scholarship amount FAQ
+  steps:
+  - intent: ask_faq_scholarship_amount
+  - action: utter_faq_scholarship_amount
+
+- story: respond to combination FAQ
+  steps:
+  - intent: ask_combination_faq
+  - action: utter_combination_faq
+
+- story: greet and ask about PROMOS scholarship
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_promos_scholarship
+  - action: utter_promos_options
+
+- story: respond to other FAQ
+  steps:
+  - intent: ask_faq_other
+  - action: utter_faq_other
+
+- story: greet and ask about PROMOS scholarship
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_promos_scholarship
+  - action: utter_promos_options
+  - intent:
+
+- story : fallback to AI API for general questions
+    steps:
+      - intent: ask_general_question  # Make sure this intent is defined or use Rasa's fallback
+      - action: action_call_ai_api

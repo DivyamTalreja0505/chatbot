@@ -1,0 +1,85 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - ask_promos_scholarship
+  - ask_faq_eligibility
+  - ask_faq_study_abroad
+  - ask_faq_funded_activities
+  - ask_faq_application
+  - ask_faq_scholarship_amount
+  - ask_combination_faq
+  - ask_faq_other
+
+entities:
+  - faq
+  - combination_faq
+
+slots:
+  faq:
+    type: text
+    mappings:
+      - type: from_text
+  combination_faq:
+    type: text
+    mappings:
+      - type: from_text
+
+responses:
+  utter_greet:
+    - text: "Welcome to HSRW Scholarship info bot! What would you like to know today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+
+  utter_faq_eligibility:
+    - text: "The PROMOS scholarship program is for regular HSRW bachelor or master students only. Citizenship is irrelevant, and exchange students cannot apply."
+
+  utter_faq_study_abroad:
+    - text: "For study abroad in Europe, you can only apply as a free-mover. For study abroad outside of Europe, you can apply as a free-mover or at a partner university."
+
+  utter_faq_funded_activities:
+    - text: "The scholarship funds internships outside Europe and study abroad programs. It does not fund internships or study in Germany or in the home country."
+
+  utter_faq_application:
+    - text: "The application deadlines are 15th January and 15th June. Late applications are not considered. Selection results are given by the international center approximately 8 weeks after the deadline via email. Required documents include a motivational letter in English or German, current transcript of record, and possibly language certificates. The selection process considers academic achievements and the reasonableness of the planned stay abroad."
+
+  utter_faq_scholarship_amount:
+    - text: "The scholarship amount is highly dependent on the host country, usually around 300€. For the US, it's approximately 400€. The scholarship payment duration is usually for 2 months per stay abroad. The money is transferred to the bank account mentioned in the declaration of acceptance, usually within 6 weeks after successful selection. The scholarship covers expenses like combined foreign health insurances, private liability insurances, and accident insurances via a special DAAD group tariff. It is not possible to receive Erasmus+ and PROMOS at the same time."
+
+  utter_combination_faq:
+    - text: "The PROMOS scholarship program is for regular HSRW bachelor or master students only. Citizenship is irrelevant, and exchange students cannot apply. For study abroad in Europe, you can only apply as a free-mover. For study abroad outside of Europe, you can apply as a free-mover or at a partner university. The scholarship funds internships outside Europe and study abroad programs. It does not fund internships or study in Germany or in the home country. The application deadlines are 15th January and 15th June. Late applications are not considered. Selection results are given by the international center approximately 8 weeks after the deadline via email. Required documents include a motivational letter in English or German, current transcript of record, and possibly language certificates. The selection process considers academic achievements and the reasonableness of the planned stay abroad."
+
+  utter_promos_options:
+    - text: "Please choose from the following options or type your question."
+      buttons:
+        - title: "Eligibility"
+          payload: /ask_faq_eligibility
+        - title: "Study Abroad"
+          payload: /ask_faq_study_abroad
+        - title: "Funded Activities"
+          payload: /ask_faq_funded_activities
+        - title: "Application"
+          payload: /ask_faq_application
+        - title: "Scholarship Amount"
+          payload: /ask_faq_scholarship_amount
+        - title: "Other Questions"
+          payload: /ask_faq_other
+
+  utter_faq_other:
+    - text: "Please type your specific question about the PROMOS scholarship."
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_faq_eligibility
+  - utter_faq_study_abroad
+  - utter_faq_funded_activities
+  - utter_faq_application
+  - utter_faq_scholarship_amount
+  - utter_combination_faq
+  - utter_faq_other
+
+actions:
+  - action_call_ai_api

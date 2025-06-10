@@ -1,0 +1,45 @@
+version: "2.0"
+rules:
+  - rule: Greet and respond
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Respond to eligibility FAQ
+    steps:
+      - intent: ask_faq_eligibility
+      - action: utter_faq_eligibility
+
+  - rule: Respond to study abroad FAQ
+    steps:
+      - intent: ask_faq_study_abroad
+      - action: utter_faq_study_abroad
+
+  - rule: Respond to funded activities FAQ
+    steps:
+      - intent: ask_faq_funded_activities
+      - action: utter_faq_funded_activities
+
+  - rule: Respond to application FAQ
+    steps:
+      - intent: ask_faq_application
+      - action: utter_faq_application
+
+  - rule: Respond to scholarship amount FAQ
+    steps:
+      - intent: ask_faq_scholarship_amount
+      - action: utter_faq_scholarship_amount
+
+  - rule: Respond to other FAQ
+    steps:
+      - intent: ask_faq_other
+      - action: utter_faq_other
+  - rule: Use AI API for general questions
+    steps:
+      - intent: ask_general_question  # You may need to define this intent or use a fallback intent
+      - action: action_call_ai_api
