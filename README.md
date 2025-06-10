@@ -34,20 +34,64 @@ A multilingual scholarship guidance chatbot developed in collaboration with Hoch
 - Deployed the solution in a scalable environment for reliable, real-time support.  
 
 ---
+## Deployment & How to Start
 
-## Deployment & Usage
+ 1. **Install Dependencies**
+Make sure you have Python installed. Then, install the required Python packages:
+```bash
+pip install rasa requests
 
-- The chatbot is accessible via REST APIs, enabling easy integration into student portals and support systems.  
-- Designed with fallback strategies and validation logic to handle ambiguous or complex queries effectively.  
-- Regular updates and improvements are made based on user interactions and feedback.  
+2. **Run the Rasa Server**
+In your terminal, start the Rasa server:
+'''bash
+rasa run
+
+3. **Run the Actions Server (if using custom actions)**
+Open another terminal and start the actions server:
+'''bash
+rasa run actions
+
+ 4. **Test the Chatbot**
+Use rasa shell to interact directly via command line:
+'''bash
+rasa shell
+
+## How to Test the Chatbot
+
+1. **Set Up the Environment:**  
+   - Ensure the backend server hosting the Rasa chatbot and API is running.  
+   - Verify that the custom actions server (if used) is active.
+
+2. **Use a REST Client:**  
+   - Tools like Postman or cURL can be used to send POST requests to your chatbot's API endpoint.  
+   - Example cURL command:  
+     ```bash
+     curl -X POST -H "Content-Type: application/json" \
+          -d '{"sender": "test_user", "message": "Hello"}' \
+          http://localhost:5005/webhooks/rest/webhook
+     ```
+
+3. **Test Different Scenarios:**  
+   - Greet the chatbot: "Hi", "Hello"  
+   - Ask specific FAQs: "What is the application deadline?"  
+   - Ask complex or unrecognized questions: "Tell me about the scholarship funding"  
+   - Verify responses are accurate, relevant, and fallback triggers work correctly.
+
+4. **Evaluate Responses:**  
+   - Check if the chatbot responds appropriately based on the intent.  
+   - Confirm that fallback responses invoke the GPT-3.5 API for unrecognized questions.
+
+5. **Iterate and Improve:**  
+   - Collect feedback from test users.  
+   - Adjust intents, stories, or fallback strategies as needed.
 
 ---
 
 ## Contact & Support
 
 For further information or collaboration opportunities, please contact:  
-**[Your Name]**  
-**Email:** [your.email@example.com]  
+**Divyam Talreja**  
+**Email:** Divyam.Manojkumar-Talreja@hsrw.org
 **Organization:** Hochschule Rhein-Waal (HSRW University)  
 
 ---
